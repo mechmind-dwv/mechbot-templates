@@ -1,0 +1,31 @@
+## 4. Presentation Templates
+
+### `templates/presentations/pitch_deck.pptx`
+(Plantilla estructurada con 10 slides)
+1. Portada
+2. Problema
+3. Solución
+4. Mercado
+5. Producto
+6. Tracción
+7. Equipo
+8. Roadmap
+9. Modelo de negocio
+10. CTA
+
+## Sistema de Variables
+```yaml
+# variables_globales.yaml
+company:
+  name: "MechBot 2.0x"
+  contact:
+    email: "hola@mechbot.com"
+    phone: "+52 55 1234 5678"
+
+social:
+  links:
+    - platform: "LinkedIn"
+      url: "https://linkedin.com/company/mechbot"
+    - platform: "Instagram"
+      url: "https://instagram.com/mechbot.official"
+```
