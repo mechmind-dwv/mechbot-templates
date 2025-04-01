@@ -17,8 +17,6 @@ Repositorio centralizado de plantillas para el proyecto MechBot 2.0x. Contiene r
 - ✅ Documentación en español/inglés
 
 ## 🗂 Estructura del Repositorio
-
-```
 mechbot-templates/
 ├── comunicacion/          # Email, presentaciones, guiones
 ├── marketing/            # Redes sociales, anuncios
