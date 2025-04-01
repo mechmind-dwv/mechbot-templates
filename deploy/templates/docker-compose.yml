@@ -1,0 +1,31 @@
+# deploy/templates/docker-compose.yml
+version: '3.8'
+
+services:
+  mechbot-app:
+    image: ${DOCKER_IMAGE:-mechbot/2.0x:latest}
+    env_file: .env
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    volumes:
+      - ./configs:/app/configs
+    networks:
+      - mechbot-net
+
+  mechbot-db:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - mechbot-net
+
+networks:
+  mechbot-net:
+    driver: bridge
+
+volumes:
+  pgdata:
