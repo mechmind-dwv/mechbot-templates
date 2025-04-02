@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 # mechbot-templates
 =======
-Aquí tienes un archivo `README.md` completo en español para tu repositorio **mechbot-templates**:
-
 ```markdown
 # 🛠️ Repositorio de Plantillas MechBot 2.0x
 
