@@ -1,0 +1,45 @@
+# Paquetes principales (versiones exactas para producción)
+numpy==1.26.4              # Procesamiento numérico
+scipy==1.13.0              # Algoritmos científicos
+pandas==2.2.2              # Manejo de datos estructurados
+scikit-learn==1.4.2        # Machine Learning
+torch==2.3.0               # Deep Learning (CPU/GPU)
+torchvision==0.18.0        # Visión por computadora
+onnxruntime==1.17.1        # Inferencia optimizada
+
+# Protocolos vehiculares
+python-can==4.3.1          # Comunicación CAN Bus
+obd==0.7.1                 # Conexión OBD-II
+pyserial==3.5              # Comunicación serial
+
+# Backend y APIs
+fastapi==0.110.1           # Framework API
+uvicorn==0.29.0            # Servidor ASGI
+python-jose==3.3.0         # JWT
+passlib==1.7.4             # Hashing de credenciales
+cryptography==42.0.5       # Cifrado avanzado
+
+# Cloud y Kubernetes
+kubernetes==29.0.0         # Client SDK para K8s
+boto3==1.34.76             # AWS SDK
+google-cloud-storage==2.14.0 # GCP Storage
+
+# Monitorización
+prometheus-client==0.20.0  # Métricas Prometheus
+opentelemetry-sdk==1.24.0  # Trazas distribuidas
+
+# Utilidades críticas
+pydantic==2.7.1            # Validación de datos
+loguru==0.7.2              # Logging estructurado
+python-dotenv==1.0.1       # Manejo de variables de entorno
+typing-extensions==4.11.0  # Soporte para type hints
+
+# Dependencias de seguridad
+vault==1.1.1               # Client HashiCorp Vault
+pyopenssl==24.1.0          # Cifrado TLS
+bandit==1.7.7              # Escaneo de seguridad
+
+# Testing y QA
+pytest==8.1.1              # Framework de pruebas
+pytest-cov==4.1.0          # Cobertura de código
+mypy==1.9.0                # Type checking
