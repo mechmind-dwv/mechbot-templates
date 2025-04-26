@@ -18,3 +18,4 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+        [![.github/workflows/django.yml](https://github.com/mechmind-dwv/mechbot-templates/actions/workflows/django.yml/badge.svg)](https://github.com/mechmind-dwv/mechbot-templates/actions/workflows/django.yml)
