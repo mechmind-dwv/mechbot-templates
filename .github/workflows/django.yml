@@ -44,4 +44,4 @@ jobs:
 
       - name: Test template rendering
         run: |
-          python -c "from jinja2 import Environment, FileSystemLoader; env = Environment(loader=FileSystemLoader('comunicacion/')); template = env.get_template('onboarding.html'); print(template.render())"
+          python -c "from jinja2 import Environment, FileSystemLoader; env = Environment(loader=FileSystemLoader('comunicacion/')); template = env.get_template('onboarding.html'); print(template.render())"a
