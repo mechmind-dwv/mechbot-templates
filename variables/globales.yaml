@@ -1,0 +1,6 @@
+configuracion:
+  entorno: desarrollo
+  version: 1.0.0
+  database:
+    host: localhost
+    puerto: 5432

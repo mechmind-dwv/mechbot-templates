@@ -2,21 +2,38 @@
 import yaml
 from pathlib import Path
 
-def validate_yaml(path):
+def validate_yaml_file(path):
     try:
         with open(path) as f:
             yaml.safe_load(f)
-        print(f"✓ {path} es válido")
+        print(f"✓ YAML válido: {path}")
         return True
     except Exception as e:
         print(f"❌ Error en {path}: {str(e)}")
         return False
 
-if __name__ == "__main__":
-    yaml_file = Path("variables/globales.yaml")
-    if not yaml_file.exists():
-        print(f"Archivo no encontrado: {yaml_file}")
-        exit(1)
+def validate_all_yaml_files():
+    # Check standard locations
+    paths_to_check = [
+        Path("variables/globales.yaml"),
+        Path(".github/ISSUE_TEMPLATE/bug_report.yml"),
+        Path(".github/workflows/")
+    ]
     
-    if not validate_yaml(yaml_file):
+    all_valid = True
+    for path in paths_to_check:
+        if path.is_dir():
+            for yaml_file in path.glob("**/*.yaml") + path.glob("**/*.yml"):
+                if not validate_yaml_file(yaml_file):
+                    all_valid = False
+        elif path.exists():
+            if not validate_yaml_file(path):
+                all_valid = False
+        else:
+            print(f"⚠️ Archivo no encontrado: {path}")
+    
+    return all_valid
+
+if __name__ == "__main__":
+    if not validate_all_yaml_files():
         exit(1)

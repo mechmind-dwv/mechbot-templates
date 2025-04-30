@@ -1,0 +1,55 @@
+name: Bug Report
+description: Reportar un error en el sistema
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - mechmind-dwv
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar este error. Por favor completa los siguientes detalles:
+  - type: input
+    id: contacto
+    attributes:
+      label: Datos de Contacto
+      description: ¿Cómo podemos contactarte si necesitamos más información?
+      placeholder: ej. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: ¿Qué ocurrió?
+      description: Describe qué pasó y qué esperabas que ocurriera
+      placeholder: Describe el problema...
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Versión
+      description: ¿Qué versión del software estás usando?
+      options:
+        - "2.0.0 (Estable)"
+        - "2.1.0 (Beta)"
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      description: Describe cómo reproducir el error
+      placeholder: |
+        1. Ir a '...'
+        2. Hacer click en '....'
+        3. Ver error
+  - type: checkboxes
+    id: terminos
+    attributes:
+      label: Código de Conducta
+      description: Al enviar este reporte, aceptas seguir nuestro [Código de Conducta](https://ejemplo.com/conducta)
+      options:
+        - label: Acepto seguir el Código de Conducta del proyecto
+          required: true
