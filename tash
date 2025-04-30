@@ -1,0 +1,60 @@
+* [33m0e1d637[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Create ci.yml
+* [33mbc39118[m Update validate_yaml.py
+* [33ma5084fa[m Update requirements.txt
+* [33m531bd6a[m Update django.yml
+* [33m95c2b57[m Update django.yml
+* [33m14be0f5[m Fusión completada
+*   [33mc834818[m Resolviendo conflictos de fusión
+[32m|[m[33m\[m  
+[32m|[m * [33m41ad426[m Create validate_yaml.py
+[32m|[m * [33m567ed13[m Update variables_globales.yaml
+[32m|[m * [33m2cbdcbe[m Update variables_globales.yaml
+[32m|[m * [33me4174b0[m Create requirements.txt
+[32m|[m * [33me175c14[m Update variables_globales.yaml
+[32m|[m * [33m0a12724[m Update requirements.txt
+[32m|[m * [33m83d9c9c[m Update requirements.txt
+[32m|[m * [33m2473248[m Update pitch_deck.pptx
+[32m|[m * [33m72547cd[m Update django.yml
+[32m|[m * [33m5979287[m Update django.yml
+[32m|[m * [33mb06684c[m Update django.yml
+[32m|[m * [33me7566ad[m Update kpi_report.ipynb
+[32m|[m * [33m3929ab7[m Update django.yml
+[32m|[m * [33m93aba5a[m Update django.yml
+[32m|[m * [33m0d3df80[m Update django.yml
+[32m|[m * [33mc4680f3[m Create SECURITY.md
+[32m|[m * [33m3ef4577[m Update django.yml
+[32m|[m * [33m235957b[m Update django.yml
+[32m|[m * [33mc08d169[m Create django.yml
+[32m|[m * [33m8362e71[m Create requirements.txt
+[32m|[m * [33m3cc830f[m Create ESSENTIALS.md
+[32m|[m * [33m9352758[m Create FINAL_CHECKLIST.md
+[32m|[m * [33m7e4a774[m Update segmentacion.csv
+[32m|[m * [33mfed7143[m Update README.md
+[32m|[m * [33mf5facd3[m Create .versionrc
+[32m|[m * [33mfdd2fdf[m Create notify.yml
+[32m|[m * [33m1801b9c[m Create validate-templates.yml
+[32m|[m * [33m1f55a3e[m Create generate-on-schedule.yml
+[32m|[m * [33mce55c60[m Create rollback.sh
+[32m|[m * [33mb88cddb[m Create deploy.yml
+[32m|[m * [33m4d1e5fd[m Create env.template
+[32m|[m * [33m63b47a9[m Create deploy.sh
+[32m|[m * [33m91732a5[m Create docker-compose.yml
+[32m|[m * [33mc13564a[m Create gitignore
+[32m|[m * [33m3522f70[m Create generate_template.py
+[32m|[m * [33m06b9171[m Create variables_globales.yaml
+[32m|[m * [33m005fe62[m Create pitch_deck.pptx
+[32m|[m * [33m970dcb4[m Create monthly_report.md
+[32m|[m * [33mca4fd4c[m Create story_instagram.md
+[32m|[m * [33m7148424[m Create post_linkedin.md
+[32m|[m * [33m459ae5b[m Create campaign_launch.md
+[32m|[m * [33m120d4b3[m Create onboarding.md`
+[32m|[m * [33mc72d877[m Create kpi_report.ipynb
+[32m|[m * [33m7f6b4dc[m Create segmentacion.csv
+[32m|[m * [33m8833437[m Create plan.md gantt       title Cronograma de Implementación       dateFormat  YYYY-MM-DD       section Marketing Digital       SEO           :active, 2023-10-01, 60d       Redes Sociales :2023-11-01, 30d       section Eventos       Feria A       :2024-02-01, 7d
+[32m|[m[32m/[m  
+*   [33m5384862[m Resuelve conflictos de merge
+[34m|[m[35m\[m  
+[34m|[m * [33mabc3de7[m Update README.md ### Características destacadas:  1. **Enfoque en usabilidad**: Instrucciones claras en español 2. **Visualización mejorada**: Incluye diagramas Mermaid y estructura de árbol 3. **Componentes técnicos**: Requisitos y comandos específicos 4. **Branding consistente**: Mantiene identidad de MechBot 5. **Soporte para colaboración**: Guía de contribución detallada  ¿Necesitas que agregue o modifique alguna sección específica? Por ejemplo podríamos incluir: - Un apartado de troubleshooting - Ejemplos prácticos de uso - Configuraciones avanzadas para CI/CD - Metodología de versionado  Dime qué ajustes necesitas y los implemento inmediatamente. ¡Estamos para ayudarte! 🚀
+[34m|[m * [33m210752c[m Update README.md
+[34m|[m * [33md95e0a6[m Create README.md
+* [33m9a15f35[m Initial commit: Template repository setup
