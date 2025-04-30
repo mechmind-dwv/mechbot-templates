@@ -1,16 +1,13 @@
-## Sistema de Variables
-```yaml
 # variables_globales.yaml
 company:
   name: "MechBot 2.0x"
   contact:
-    email: "hola@mechbot.com"
-    phone: "+52 55 1234 5678"
+    email: "ai.mechmind@gmail.com"
+    phone: "+34 644 178 510"
 
 social:
   links:
     - platform: "LinkedIn"
       url: "https://linkedin.com/company/mechbot"
     - platform: "Instagram"
-      url: "https://instagram.com/mechbot.official"
-```
+      url: "https://instagram.com/mechbot.official
