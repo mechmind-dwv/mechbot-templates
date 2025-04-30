@@ -1,0 +1,27 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "pip"  # For Python dependencies
+    directory: "/"  # Looks for requirements.txt in root
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "mechmind-dwv"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore-dev"
+
+  - package-ecosystem: "github-actions"  # For GitHub Actions
+    directory: "/.github/workflows"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+  - package-ecosystem: "npm"  # If you have JavaScript/Node.js dependencies
+    directory: "/"  # Looks for package.json
+    schedule:
+      interval: "weekly"
+    versioning-strategy: "increase"
