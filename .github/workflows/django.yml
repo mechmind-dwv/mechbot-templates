@@ -1,47 +1,21 @@
-name: Python CI (MechBot Templates)
+import yaml
+import os
+from pathlib import Path
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+def validate_yaml_files():
+    yaml_dir = Path("variables")
+    errors = []
+    
+    for yaml_file in yaml_dir.glob("*.yaml"):
+        try:
+            with open(yaml_file) as f:
+                yaml.safe_load(f)
+            print(f"✓ {yaml_file} es válido")
+        except Exception as e:
+            errors.append(f"❌ Error en {yaml_file}: {str(e)}")
+    
+    if errors:
+        raise ValueError("\n".join(errors))
 
-jobs:
-  validate:
-    runs-on: ubuntu-22.04
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r backend/requirements.txt  # Ruta corregida
-          pip install jinja2 pyyaml  # Librerías adicionales
-
-      - name: Validate YAML variables
-        run: |
-          python -c "import yaml; yaml.safe_load(open('variables_globales.yaml'))"
-          echo "✅ YAML válido"
-
-      - name: Check folder structure
-        run: |
-          [ -d "herramientas" ] || exit 1
-          [ -f "variables_globales.yaml" ] || exit 1
-          [ -f "backend/requirements.txt" ] || exit 1
-
-      - name: Test template generation
-        run: |
-          cd herramientas/
-          python generador.py -t comunicacion/onboarding
-
-      - name: Test template rendering
-        run: |
-          python -c "from jinja2 import Environment, FileSystemLoader; env = Environment(loader=FileSystemLoader('comunicacion/')); template = env.get_template('onboarding.html'); print(template.render())"a
+if __name__ == "__main__":
+    validate_yaml_files()
