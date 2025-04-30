@@ -1,0 +1,22 @@
+name: Security Scan
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Diario a medianoche
+  push:
+    paths:
+      - '**/requirements.txt'
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan dependencies
+        uses: ossf/scorecard-action@v2
+        with:
+          results_file: results.sarif
+          results_format: sarif
+      - name: Upload results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
