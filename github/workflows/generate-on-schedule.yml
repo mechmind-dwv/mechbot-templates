@@ -1,0 +1,28 @@
+# .github/workflows/generate-on-schedule.yml
+name: Generación Programada
+on:
+  schedule:
+    - cron: '0 9 * * 1-5' # Ejecutar días hábiles a las 9AM
+  workflow_dispatch:
+
+jobs:
+  generate-templates:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: production
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      
+      - name: Configura AWS CLI
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: us-east-1
+
+      - run: |
+          pip install -r herramientas/requirements.txt
+          python herramientas/generador.py --all
+          aws s3 sync ./salida s3://mechbot-templates-$ENVIRONMENT

@@ -1,0 +1,118 @@
+```gitignore
+# .gitignore para MechBot 2.0x
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📁 ARCHIVOS DEL SISTEMA
+# ━━━━━━━━━━━━━━━━━━━━━━
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.log
+*.tmp
+*.bak
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🐍 ENTORNOS PYTHON
+# ━━━━━━━━━━━━━━━━━━━━━━
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📊 DATOS SENSIBLES
+# ━━━━━━━━━━━━━━━━━━━━━━
+*.env
+*.secret
+*.key
+credentials.json
+config_private.yaml
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📈 REPORTES/ANALÍTICAS
+# ━━━━━━━━━━━━━━━━━━━━━━
+/dashboards/output/
+!/dashboards/output/.keep
+/data/raw/
+/data/processed/temporal_*
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🖼️ ASSETS GENERADOS
+# ━━━━━━━━━━━━━━━━━━━━━━
+/templates/output/
+!/templates/output/.keep
+*.png.tmp
+*.jpg.tmp
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📦 DEPENDENCIAS
+# ━━━━━━━━━━━━━━━━━━━━━━
+node_modules/
+bower_components/
+.jupyter/
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🛠 HERRAMIENTAS DE DESARROLLO
+# ━━━━━━━━━━━━━━━━━━━━━━
+.idea/
+.vscode/
+*.code-workspace
+*.iml
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📄 DOCUMENTACIÓN
+# ━━━━━━━━━━━━━━━━━━━━━━
+/docs/_build/
+/docs/.cache
+*.aux
+*.toc
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🚀 EXCEPCIONES (archivos a incluir)
+# ━━━━━━━━━━━━━━━━━━━━━━
+!.keep
+!.gitkeep
+```
+
+### Explicación por secciones:
+
+1. **Protección de datos sensibles**:
+   - Excluye archivos de configuración privada y credenciales
+   - Incluye patrones comunes para variables de entorno
+
+2. **Estructura del proyecto**:
+   - Ignora outputs generados pero mantiene estructura de directorios (con .keep)
+   - Excluye datos temporales de procesamiento
+
+3. **Optimización para marketing**:
+   - Ignora assets gráficos temporales
+   - Mantiene limpios los reportes generados automáticamente
+
+4. **Entornos de desarrollo**:
+   - Configuraciones específicas de IDEs
+   - Entornos virtuales de Python
+
+5. **Compatibilidad multiplataforma**:
+   - Archivos temporales de sistemas operativos
+   - Metadatos no esenciales
+
+### Recomendaciones adicionales:
+
+1. Para mantener carpetas vacías en el repositorio:
+   ```bash
+   touch dashboards/output/.keep templates/output/.keep
+   ```
+
+2. Para verificar qué archivos se ignorarán:
+   ```bash
+   git check-ignore -v *
+   ```
+
+¿Necesitas que agregue alguna regla específica para:
+- Archivos de herramientas de análisis (Google Analytics, Hotjar)?
+- Configuraciones de servicios cloud (AWS, GCP)?
+- Formatos específicos de diseño gráfico?

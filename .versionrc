@@ -1,0 +1,12 @@
+// .versionrc
+{
+  "types": [
+    {"type": "feat", "section": "Features"},
+    {"type": "fix", "section": "Bug Fixes"},
+    {"type": "chore", "hidden": true}
+  ],
+  "bumpFiles": [
+    {"filename": "package.json", "type": "json"},
+    {"filename": "variables/version.yaml", "type": "yaml"}
+  ]
+}
