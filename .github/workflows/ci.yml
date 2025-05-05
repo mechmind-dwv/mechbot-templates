@@ -20,9 +20,9 @@ jobs:
         pip install pytest pytest-django pytest-cov
     
     - name: Run tests
-  run: |
-    cd backend
-    export PYTHONPATH=$PYTHONPATH:$(pwd)
-    export DJANGO_SETTINGS_MODULE=config.settings
-    python -m pytest tests/ -v --cov=.
-    python manage.py test
+      run: |
+        cd backend
+        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        export DJANGO_SETTINGS_MODULE=config.settings
+        python -m pytest tests/ -v --cov=backend --cov-fail-under=70
+        python manage.py test
