@@ -4,12 +4,5 @@ omit =
     */tests/*
     */migrations/*
     */__init__.py
-    asgi.py
-    wsgi.py
-    manage.py
-
-[report]
-exclude_lines =
-    pragma: no cover
-    def __str__
-    raise NotImplementedError
+    */asgi.py
+    */wsgi.py

@@ -1,4 +1,4 @@
-# **Documentación Esencial para Despliegue - MechBot 2.0x**  
+# **Documentación Esencial para Despliegue - MechBot 2.0x**
 `DEPLOYMENT_ESSENTIALS.md` | Ubicación: `/docs/deployment/ESSENTIALS.md`
 
 ## **1. Despliegue en Edge (Dispositivos Vehiculares)**
@@ -13,8 +13,8 @@
   --backup=create
 ```
 
-**Archivos clave**:  
-📌 [Guía de Recuperación](/docs/deployment/EDGE_RECOVERY.md)  
+**Archivos clave**:
+📌 [Guía de Recuperación](/docs/deployment/EDGE_RECOVERY.md)
 📌 [Checklist Pre-Despliegue](/checklists/pre_deployment_edge.csv)
 
 ## **2. Despliegue en Cloud (Kubernetes)**
@@ -97,9 +97,9 @@ kubectl cordon NODE_NAME && \
 kubectl drain NODE_NAME --ignore-daemonsets --delete-emptydir-data
 ```
 
-**Equipo de Despliegue**:  
-📞 *Soporte 24/7: deployment-support@mechbot.tech*  
-🚨 *Código de Emergencia: #DEPLOY-RED-ALERT*  
+**Equipo de Despliegue**:
+📞 *Soporte 24/7: deployment-support@mechbot.tech*
+🚨 *Código de Emergencia: #DEPLOY-RED-ALERT*
 
 ```bash
 # Verificar integridad del despliegue
@@ -107,6 +107,6 @@ cosign verify --key ./.cosign.pub \
   $(helm get notes mechbot-core -n production | grep "Image Digest" | cut -d: -f2-)
 ```
 
-*Última actualización: 2025-07-20 - Versión 2.1.8-stable*  
+*Última actualización: 2025-07-20 - Versión 2.1.8-stable*
 
 > 🔐 **Nota de Seguridad**: Todos los comandos requieren autenticación MFA y registro en el sistema de auditoría.

@@ -117,11 +117,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Configuración para tests
 import sys
-if 'test' in sys.argv:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': ':memory:'
-        }
-    }
 
+if "test" in sys.argv:
+    DATABASES = {
+        "default": {"ENGINE": "django.db.backends.sqlite3", "NAME": ":memory:"}
+    }
