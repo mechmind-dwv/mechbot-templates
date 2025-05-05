@@ -7,3 +7,6 @@
 - name: Validate Templates
   run: |
     jinja2-cli --help
+
+- name: Verify jinja2-cli Installation
+  run: which jinja2-cli
