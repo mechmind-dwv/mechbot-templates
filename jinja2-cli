@@ -1,13 +1,14 @@
-- name: Install jinja2-cli
+- name: Install Dependencies
   run: |
     python -m pip install --upgrade pip
     pip install jinja2-cli
-    echo "PATH=$(python -m site --user-base)/bin:$PATH" >> $GITHUB_ENV
+
+- name: Add jinja2-cli to PATH
+  run: echo "PATH=$(python -m site --user-base)/bin:$PATH" >> $GITHUB_ENV
+
+- name: Verify jinja2-cli Installation
+  run: which jinja2-cli
 
 - name: Validate Templates
   run: |
     jinja2-cli --help
-
-- name: Verify jinja2-cli Installation
-  run: |
-     which jinja2-cli
