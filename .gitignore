@@ -1,1 +1,29 @@
+# Entornos virtuales
+.venv/
 venv/
+
+# Archivos de entorno
+.env
+
+# Archivos de sistema
+.DS_Store
+*.swp
+
+# Archivos generados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Datos y binarios
+*.csv
+*.png
+*.ipynb
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Documentos
+*.pptx
+*.pdf
