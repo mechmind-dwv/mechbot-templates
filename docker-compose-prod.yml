@@ -1,0 +1,18 @@
+# docker-compose-prod.yml
+services:
+  web:
+    image: mechmind-dwv/mechbot-templates:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=False
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
