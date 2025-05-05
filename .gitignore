@@ -27,3 +27,6 @@ package-lock.json
 # Documentos
 *.pptx
 *.pdf
+
+# Archivos temporales
+*.log
