@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# mechbot-templates
-=======
-```markdown
+
 # 🛠️ Repositorio de Plantillas MechBot 2.0x
 
 ![GitHub](https://img.shields.io/badge/Estado-Producción-brightgreen)
@@ -97,4 +94,3 @@ Equipo de Ingeniería MechBot
 - Metodología de versionado
 
 Dime qué ajustes necesitas y los implemento inmediatamente. ¡Estamos para ayudarte! 🚀
->>>>>>> origin/main
