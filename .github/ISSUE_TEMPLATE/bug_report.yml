@@ -14,7 +14,7 @@ body:
     attributes:
       label: Datos de Contacto
       description: ¿Cómo podemos contactarte si necesitamos más información?
-      placeholder: ej. email@example.com
+      placeholder: ia.mechmind@gmail.com
     validations:
       required: false
   - type: textarea
