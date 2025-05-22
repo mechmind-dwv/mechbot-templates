@@ -2,7 +2,7 @@ name: Django CI
 
 on: [push, pull_request]
 
-jobs: write 
+jobs: 
   build:
     runs-on: ubuntu-latest
     steps:
