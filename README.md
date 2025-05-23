@@ -6,7 +6,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mechmind-dwv/mechbot-templates)
 
 Repositorio centralizado de plantillas para el proyecto MechBot 2.0x. Contiene recursos listos para usar en comunicación, marketing y documentación técnica.
-
+``|
 ## 📌 Características Principales
 
 - ✅ Plantillas estandarizadas para todos los equipos
