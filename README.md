@@ -1,7 +1,5 @@
-<<<<<<< HEAD
+
 # mechbot-templates
-=======
-```markdown
 # 🛠️ Repositorio de Plantillas MechBot 2.0x
 
 ![GitHub](https://img.shields.io/badge/Estado-Producción-brightgreen)
