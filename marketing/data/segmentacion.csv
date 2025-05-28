@@ -1,1 +1,32 @@
+```
 
+## Estructura del Dashboard
+
+1. **Segmentación de Mercado**
+   - Visualización interactiva por segmento
+   - Menú desplegable de widgets para selección.
+
+2**Rendimiento de Canales**
+   - Diagrama de dispersión de CTR vs Costo por cliente potencial
+   - Tamaño de burbujas por inversión
+
+3**Seguimiento de objetivos**
+   - Gráfico de embudo de progreso
+   - Comparación meta vs. real
+
+4**Recomendaciones**
+   - Generación automática basada en datos
+   - Priorización por tamaño de mercado
+
+## Integración con el Repositorio
+
+``golpe
+marketing/
+├── paneles de control/
+│ ├── kpi_report.ipynb # Este cuaderno
+│ └── requisitos.txt # Dependencias
+├── datos/
+│ └── segmentacion.csv#Fuente de datos
+└── cuadernos/
+    └── segment_analysis.ipynb # Análisis complementario
+```
