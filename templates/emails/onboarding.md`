@@ -1,5 +1,3 @@
-### `templates/emails/onboarding.md`
-```markdown
 # Asunto: ¡Bienvenido a MechBot 2.0x, {{nombre}}!
 
 Hola {{nombre}},
@@ -15,4 +13,3 @@ Hola {{nombre}},
 
 Saludos,
 El equipo MechBot
-```
