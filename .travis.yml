@@ -1,0 +1,25 @@
+# .travis.yml
+language: python
+python: "3.10"
+
+services:
+  - docker
+
+env:
+  global:
+    - DOCKER_USERNAME=$DOCKER_USERNAME
+    - DOCKER_PASSWORD=$DOCKER_PASSWORD
+
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+script:
+  - make image
+  - make test
+
+deploy:
+  provider: script
+  script: make push
+  on:
+    tags: true
+    branch: main

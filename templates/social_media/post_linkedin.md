@@ -4,7 +4,7 @@
 ```markdown
 🏭 ¿Cansado de perder citas en tu taller mecánico?
 
-Presentamos #MechBot20x: 
+Presentamos #MechBot20x:
 
 ✅ Agenda automática 24/7
 ✅ Reduce no-shows en 40%

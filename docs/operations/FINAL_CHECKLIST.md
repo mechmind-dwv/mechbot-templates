@@ -1,4 +1,4 @@
-# **Documentación Final de Operaciones - MechBot 2.0x**  
+# **Documentación Final de Operaciones - MechBot 2.0x**
 `CLOSING_OPERATIONS.md` | Ubicación: `/docs/operations/FINAL_CHECKLIST.md`
 
 ## **1. Protocolo de Cierre Nocturno**
@@ -14,9 +14,9 @@ make night-check \
 
 **Salida Esperada**:
 ```
-[✓] Todos los contenedores en estado Running  
-[✓] CAN Bus activo en 5 nodos  
-[✓] Backup más reciente: 2025-07-20_2300.tar.gz (verificado)  
+[✓] Todos los contenedores en estado Running
+[✓] CAN Bus activo en 5 nodos
+[✓] Backup más reciente: 2025-07-20_2300.tar.gz (verificado)
 ```
 
 ## **2. Monitorización Nocturna**
@@ -29,7 +29,7 @@ alert_rules:
     threshold: ">0"
     severity: critical
     notify: oncall_engineer
-  
+
   - metric: canbus_latency_ms
     threshold: ">50"
     severity: warning
@@ -48,8 +48,8 @@ watch -n 60 "kubectl get pods -A | grep -v Completed && \
 ### **3.1 Contactos de Emergencia**
 | Rol | Contacto | Disponibilidad |
 |------|----------|----------------|
-| Ingeniero On-Call | @oncall-engineer | 24/7 (x2345) |  
-| Soporte Hardware | @hw-support | Hasta 01:00 |  
+| Ingeniero On-Call | @oncall-engineer | 24/7 (x2345) |
+| Soporte Hardware | @hw-support | Hasta 01:00 |
 
 ### **3.2 Accesos Rápidos**
 ```bash
@@ -72,16 +72,16 @@ open https://monitoring.mechbot.tech/night-view
 figlet "Buenas noches equipo!" | lolcat
 ```
 
-**Equipo MechBot 2.0x**  
-🌙 *Descansen bien, el sistema sigue en buenas manos*  
-🛡️ *Modo nocturno activado - Seguridad al 100%*  
+**Equipo MechBot 2.0x**
+🌙 *Descansen bien, el sistema sigue en buenas manos*
+🛡️ *Modo nocturno activado - Seguridad al 100%*
 
 ```bash
 # Última verificación del sistema
 make final-check | tee /var/log/night_audit.log
 ```
 
-*Documento firmado digitalmente a las $(date +%H:%M) - Buenas noches!*  
+*Documento firmado digitalmente a las $(date +%H:%M) - Buenas noches!*
 
-> 🌟 **Recuerden**: Mañana seguimos innovando. El repositorio estará esperando.  
+> 🌟 **Recuerden**: Mañana seguimos innovando. El repositorio estará esperando.
 > `git commit -am "Fin del día - Nos vemos mañana" && git push origin main`
