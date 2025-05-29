@@ -28,5 +28,3 @@ marketing/
 └── cuadernos/
     └── segment_analysis.ipynb # Análisis complementario
 ```
-marketing/data
-/segmentacion.csv
