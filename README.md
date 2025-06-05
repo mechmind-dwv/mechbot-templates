@@ -1,10 +1,10 @@
-# 🛠️ Repositorio de Plantillas MechBot 2.0x
+# 🛠️ Repositorio de Plantillas MechBot 2.0xAdd commentMore actions
 
 ![GitHub](https://img.shields.io/badge/Estado-Producción-brightgreen)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mechmind-dwv/mechbot-templates)
 
 Repositorio centralizado de plantillas para el proyecto MechBot 2.0x. Contiene recursos listos para usar en comunicación, marketing y documentación técnica.
-``|
+
 ## 📌 Características Principales
 
 - ✅ Plantillas estandarizadas para todos los equipos
@@ -14,6 +14,8 @@ Repositorio centralizado de plantillas para el proyecto MechBot 2.0x. Contiene r
 - ✅ Documentación en español/inglés
 
 ## 🗂 Estructura del Repositorio
+
+```
 mechbot-templates/
 ├── comunicacion/          # Email, presentaciones, guiones
 ├── marketing/            # Redes sociales, anuncios
@@ -71,8 +73,8 @@ Este proyecto está bajo licencia [MIT](LICENSE).
 
 ## 📬 Contacto
 
-Equipo de Ingeniería MechBot
-📧 ia.mechmind@gmail.com
+Equipo de Ingeniería MechBot  
+📧 ai mechmind@gmail.com  
 🔗 [Sitio Oficial](https://mechbot.com)
 
 [![Logo MechBot](https://via.placeholder.com/100x30?text=MechBot+Logo)](https://mechbot.com)
