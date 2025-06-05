@@ -3,7 +3,7 @@ name: CI Pipeline
 on: [push, pull_request]
 
 jobs:
-  build:
+  build: witer
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
