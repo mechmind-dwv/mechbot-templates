@@ -1,4 +1,3 @@
-# .github/workflows/validate-templates.yml
 name: Validación
 on: [pull_request]
 
