@@ -1,4 +1,3 @@
-# .github/workflows/docker-publish.yml
 name: Docker Build and Push
 
 on:
