@@ -1,0 +1,4 @@
+### 
+- Git 2.30+
+- Python 3.8+ (para scripts de automatización)
+- Librerías: `Jinja2`, `PyYAML`
