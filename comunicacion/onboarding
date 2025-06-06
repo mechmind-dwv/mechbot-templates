@@ -7,6 +7,5 @@
 5. Abre un Pull Request### Uso Básico
 1. Edita las variables en `variables/globales.yaml`
 2. Genera plantillas:
-```bash
+
 python herramientas/generador.py -t comunicacion/onboarding
-```
