@@ -1,5 +1,3 @@
-# **Segmentación de Mercado - MechBot 2.0x**
-
 segmento,subsegmento,caracteristicas,tamaño_mercado,canal_primario,canal_secundario,frecuencia_compra,necesidad_clave
 talleres_mecanicos,independientes,"1-5 empleados, presupuesto limitado",45%,Facebook,WhatsApp Business,mensual,"optimizar costos"
 talleres_mecanicos,cadenas,"+10 sucursales, ERP integrado",25%,LinkedIn,Email Marketing,semanal,"estandarizar procesos"
