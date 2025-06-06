@@ -1,7 +1,4 @@
-## 2. Social Media Templates
-
-### `templates/social_media/post_linkedin.md`
-```markdown
+### `templates/social/media/post/linkedin.md`
 🏭 ¿Cansado de perder citas en tu taller mecánico?
 
 Presentamos #MechBot20x:
@@ -13,4 +10,3 @@ Presentamos #MechBot20x:
 👉 Demo gratuita: [Enlace]
 
 #InnovaciónAutomotriz #Chatbots #Productividad
-```
