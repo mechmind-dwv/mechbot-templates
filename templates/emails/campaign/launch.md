@@ -1,5 +1,3 @@
-### `templates/emails/campaign_launch.md`
-```markdown
 # Asunto: 🚀 Nueva función: {{feature_name}}
 
 Hola {{nombre}},
