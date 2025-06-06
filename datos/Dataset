@@ -1,5 +1,3 @@
-## Estructura del Dataset
-.
 | Columna | Tipo | Descripción | Ejemplo |
 |---------|------|-------------|---------|
 | segmento | string | Grupo principal | "talleres_mecanicos" |
