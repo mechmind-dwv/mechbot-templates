@@ -1,4 +1,3 @@
-# .github/workflows/notify.yml
 name: Notificaciones
 on:
   workflow_run:
