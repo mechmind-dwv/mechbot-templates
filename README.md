@@ -1,5 +1,4 @@
-# 🛠️ Repositorio de Plantillas MechBot 2.0xAdd commentMore actions
-
+# 🛠️ Repositorio de Plantillas MechBot 2.0x
 ![GitHub](https://img.shields.io/badge/Estado-Producción-brightgreen)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mechmind-dwv/mechbot-templates)
 
