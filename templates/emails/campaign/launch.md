@@ -14,4 +14,3 @@ Estamos emocionados de presentarte {{feature_name}}, diseñada para ayudarte con
 Video demostrativo: [YouTube Link]
 
 ¡Tu feedback es importante!
-```
