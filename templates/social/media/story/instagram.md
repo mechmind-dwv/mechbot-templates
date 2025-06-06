@@ -1,6 +1,4 @@
-
-### `templates/social_media/story_instagram.md`
-```markdown
+### `templates/social/media/story/instagram.md`
 ¡NUEVO! 🤖
 
 MechBot ahora responde preguntas técnicas de mecánica básica ⚙️
@@ -8,4 +6,3 @@ MechBot ahora responde preguntas técnicas de mecánica básica ⚙️
 👉 Desliza para ver el demo
 [Sticker: "Pregúntame"]
 [Hashtag: #MechBotExpert]
-```
