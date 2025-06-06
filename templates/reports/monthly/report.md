@@ -1,5 +1,3 @@
-### `templates/reports/monthly_report.md`
-```markdown
 # Reporte Mensual - {{mes}} {{año}}
 
 ## KPIs Principales
@@ -15,4 +13,3 @@
 ## Acciones Recomendadas
 - [ ] {{action_1}}
 - [ ] {{action_2}}
-```
