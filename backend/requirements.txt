@@ -58,6 +58,6 @@ sphinxcontrib-qthelp==2.0.0
 sphinxcontrib-serializinghtml==2.0.0
 sqlparse==0.5.3
 tzdata==2025.2
-urllib3==2.4.0
+urllib3==2.5.0
 virtualenv==20.31.0
 wheel==0.45.1
