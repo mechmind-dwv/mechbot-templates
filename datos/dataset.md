@@ -7,4 +7,4 @@
 | canal_primario | string | Canal de marketing principal | "Facebook" |
 | canal_secundario | string | Canal de apoyo | "WhatsApp Business" |
 | frecuencia_compra | string | Periodicidad de interacción | "mensual" |
-| necesidad_clave | string | Pain point principal | "optimizar co
+| necesidad_clave | string | Pain point principal | "optimizar costos" |
