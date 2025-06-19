@@ -1,4 +1,3 @@
-# docker-compose-prod.yml
 services:
   web:
     image: mechmind-dwv/mechbot-templates:latest
