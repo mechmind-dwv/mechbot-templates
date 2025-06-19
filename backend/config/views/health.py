@@ -1,4 +1,3 @@
-# backend/config/views/health.py
 from django.http import JsonResponse
 from redis import Redis
 from django.db import connection
