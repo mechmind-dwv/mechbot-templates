@@ -13,7 +13,7 @@ Django==5.2.2
 docutils==0.21.2
 execnet==2.1.1
 filelock==3.18.0
-identify==2.6.10
+identify==2.6.12
 idna==3.10
 imagesize==1.4.1
 iniconfig==2.1.0
