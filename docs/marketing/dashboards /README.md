@@ -1,8 +1,7 @@
 
 #    !jupyter nbconvert --to html kpi_report.ipynb
-#    ```
 #
-# [![GitHub](https://img.shields.io/badge/Ver_en_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/mechbot/marketing)
+[![GitHub](https://img.shields.io/badge/Ver_en_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/mechbot/marketing)
 ```
 
 ## Estructura del Dashboard
