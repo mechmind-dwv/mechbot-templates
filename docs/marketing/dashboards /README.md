@@ -1,9 +1,4 @@
-# ## 📌 Instrucciones de Uso
-#
-# 1. Ejecutar todas las celdas (`Kernel > Restart & Run All`)
-# 2. Seleccionar segmentos en el dropdown interactivo
-# 3. Exportar reporte como HTML:
-#    ```python
+
 #    !jupyter nbconvert --to html kpi_report.ipynb
 #    ```
 #
