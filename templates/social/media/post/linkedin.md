@@ -1,4 +1,3 @@
-### `templates/social/media/post/linkedin.md`
 🏭 ¿Cansado de perder citas en tu taller mecánico?
 
 Presentamos #MechBot20x:
