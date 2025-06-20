@@ -1,4 +1,3 @@
-#compose.yml
 services:
   web:
     build: .
