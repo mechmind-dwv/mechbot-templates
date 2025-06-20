@@ -1,4 +1,3 @@
-### `templates/social/media/story/instagram.md`
 ¡NUEVO! 🤖
 
 MechBot ahora responde preguntas técnicas de mecánica básica ⚙️
