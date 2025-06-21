@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Scan dependencies
-        uses: ossf/scorecard-action@v2
+        uses: ossf/scorecard-action@vV1.2.6
         with:
           results_file: results.sarif
           results_format: sarif
