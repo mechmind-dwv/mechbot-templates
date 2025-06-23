@@ -1,4 +1,6 @@
 name: Generación Programada
+permissions:
+  contents: read
 on:
   schedule:
     - cron: '0 9 * * 1-5' # Ejecutar días hábiles a las 9AM
