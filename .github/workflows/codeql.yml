@@ -28,13 +28,11 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
-
-      # Si necesitas instalar dependencias, agrégalas aquí.
-      # Ejemplo para Python:
-      # - name: Configurar Python
-      #   uses: actions/setup-python@v5
-      #   with:
-      #     python-version: '3.11'
+        
+       - name: Configurar Python
+         uses: actions/setup-python@v5
+         with:
+           python-version: '3.11'
 
       - name: Inicializar CodeQL
         uses: github/codeql-action/init@v3
