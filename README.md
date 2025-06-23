@@ -4,14 +4,6 @@
 
 Repositorio centralizado de plantillas para el proyecto MechBot 2.0x. Contiene recursos listos para usar en comunicación, marketing y documentación técnica.
 
-### Características destacadas:
-
-1. **Enfoque en usabilidad**: Instrucciones claras en español
-2. **Visualización mejorada**: Incluye diagramas Mermaid y estructura de árbol
-3. **Componentes técnicos**: Requisitos y comandos específicos
-4. **Branding consistente**: Mantiene identidad de MechBot
-5. **Soporte para colaboración**: Guía de contribución detallada
-
 ## 📌 Características Principales
 
 - ✅ Plantillas estandarizadas para todos los equipos
@@ -86,19 +78,3 @@ Equipo de Ingeniería MechBot
 
 [![Logo MechBot](https://via.placeholder.com/100x30?text=MechBot+Logo)](https://mechbot.com)
 ```
-
-### Características destacadas:
-
-1. **Enfoque en usabilidad**: Instrucciones claras en español
-2. **Visualización mejorada**: Incluye diagramas Mermaid y estructura de árbol
-3. **Componentes técnicos**: Requisitos y comandos específicos
-4. **Branding consistente**: Mantiene identidad de MechBot
-5. **Soporte para colaboración**: Guía de contribución detallada
-
-¿Necesitas que agregue o modifique alguna sección específica? Por ejemplo podríamos incluir:
-- Un apartado de troubleshooting
-- Ejemplos prácticos de uso
-- Configuraciones avanzadas para CI/CD
-- Metodología de versionado
-
-Dime qué ajustes necesitas y los implemento inmediatamente. ¡Estamos para ayudarte! 🚀
