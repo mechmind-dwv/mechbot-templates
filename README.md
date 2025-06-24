@@ -1,7 +1,8 @@
 # 🛠️ Repositorio de Plantillas MechBot 2.0x
 ![GitHub](https://img.shields.io/badge/Estado-Producción-brightgreen)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mechmind-dwv/mechbot-templates)
-
+[![GitHub](https://img.shields.io/badge/Ver_en_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/mechbot/marketing)
+ 
 Repositorio centralizado de plantillas para el proyecto MechBot 2.0x. Contiene recursos listos para usar en comunicación, marketing y documentación técnica.
 
 ## 📌 Características Principales
