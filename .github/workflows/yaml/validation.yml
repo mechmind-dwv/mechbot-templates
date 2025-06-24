@@ -1,10 +1,10 @@
 name: Validación YAML
-on: 
+on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-    
+
 jobs:
   validate:
     runs-on: ubuntu-latest

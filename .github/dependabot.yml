@@ -17,7 +17,7 @@ updates:
       - dependency-name: "torch"
         versions: ["< 2.3.1"]
       - dependency-name: "python-jose"
-        versions: ["< 3.3.2"] 
+        versions: ["< 3.3.2"]
       - dependency-name: "cryptography"
         versions: ["< 42.0.5"]
 

@@ -67,10 +67,10 @@ jobs:
     needs: quality-assurance
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Docker build
         run: docker build -t mechbot-backend .
-        
+
       - name: Notify Slack
         uses: slackapi/slack-github-action@v1
         with:
