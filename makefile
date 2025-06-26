@@ -1,4 +1,3 @@
-# Makefile
 IMAGE_NAME = mechmind-dwv/mechbot-templates
 VERSION = $(shell git rev-parse --short HEAD)
 
