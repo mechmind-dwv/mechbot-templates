@@ -1,4 +1,5 @@
 # 🛠️ Repositorio de Plantillas MechBot 2.0x
+[![Django CI](https://github.com/MechBot-2x/mechbot-templates/actions/workflows/django.yml/badge.svg)](https://github.com/MechBot-2x/mechbot-templates/actions/workflows/django.yml)
 [![MechBot Supercharged CI](https://github.com/MechBot-2x/mechbot-templates/actions/workflows/CI.yml/badge.svg)](https://github.com/MechBot-2x/mechbot-templates/actions/workflows/CI.yml)
 ![GitHub](https://img.shields.io/badge/Estado-Producción-brightgreen)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mechmind-dwv/mechbot-templates)
