@@ -1,6 +1,4 @@
-name: Security Scan
-permissions:
-  contents: read
+name: Security ScanAdd commentMore actions
 on:
   schedule:
     - cron: '0 0 * * *'  # Diario a medianoche
@@ -14,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Scan dependencies
-        uses: ossf/scorecard-action@v1.2.6
+        uses: ossf/scorecard-action@v2
         with:
           results_file: results.sarif
           results_format: sarif
       - name: Upload results
-        uses: github/codeql-action/upload-sarif@v1.2.6
+        uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: results.sarif
