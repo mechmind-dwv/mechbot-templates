@@ -22,7 +22,7 @@ markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
 mechanicalmind_ai==3.0.1
-meson==1.8.0
+meson==1.8.2
 mypy_extensions==1.1.0
 ninja==1.11.1.4
 nodeenv==1.9.1
