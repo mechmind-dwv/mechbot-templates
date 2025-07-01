@@ -1,27 +1,26 @@
 name: Validación YAML
-on:
+on: 
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-
 jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Para obtener todo el historial de commits
-
+          
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'  # Habilita cache automático para pip
-
+          
       - name: Cache dependencies
         uses: actions/cache@v3
         id: cache
@@ -32,23 +31,24 @@ jobs:
           key: ${{ runner.os }}-python-${{ hashFiles('**/requirements*.txt') }}
           restore-keys: |
             ${{ runner.os }}-python-
-
+            
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install --user pyyaml>=6.0 pathspec>=0.12 MarkupSafe>=2.0 yamllint>=1.37 jinja2>=3.1 jinja2-cli>=0.8
           echo "$(python -m site --user-base)/bin" >> $GITHUB_PATH
-
+          
       - name: Validate YAML files
         run: |
           echo "::group::System Information"
           python --version
           pip list
           echo "::endgroup::"
+          
           echo "::group::Validating YAML files"
           # Validación estructural con yamllint
           find . -name "*.yaml" -o -name "*.yml" | xargs -I {} sh -c 'echo "Validating {}"; python -m yamllint {}'
-
+          
           # Validación de templates Jinja2
           for file in $(find . -name "*.yaml" -o -name "*.yml"); do
             echo "Checking Jinja2 templates in $file"
@@ -58,8 +58,9 @@ jobs:
             fi
           done
           echo "::endgroup::"
+          
           echo "::notice::All YAML files validated successfully"
-
+          
       - name: Upload validation report
         if: always()
         uses: actions/upload-artifact@v3
