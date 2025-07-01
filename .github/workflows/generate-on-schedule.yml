@@ -1,6 +1,4 @@
-name: Generación Programada
-permissions:
-  contents: read
+name: Generación ProgramadaAdd commentMore actions
 on:
   schedule:
     - cron: '0 9 * * 1-5' # Ejecutar días hábiles a las 9AM
@@ -15,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: recursive
-
+      
       - name: Configura AWS CLI
         uses: aws-actions/configure-aws-credentials@v2
         with:
