@@ -1,4 +1,4 @@
-name: Security ScanAdd commentMore actions
+name: Security Scan
 on:
   schedule:
     - cron: '0 0 * * *'  # Diario a medianoche
