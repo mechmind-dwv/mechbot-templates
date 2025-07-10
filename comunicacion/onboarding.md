@@ -1,3 +1,4 @@
+
 ## 🤝 Cómo Contribuir
 
 1. Haz fork del repositorio
@@ -9,3 +10,4 @@
 2. Genera plantillas:
 
 python herramientas/generador.py -t comunicacion/onboarding
+···
