@@ -25,3 +25,9 @@ jobs:
           pip install -r herramientas/requirements.txt
           python herramientas/generador.py --all
           aws s3 sync ./salida s3://mechbot-templates-$ENVIRONMENT
+          aws-region: us-east-1
+
+      - run: |
+          pip install -r herramientas/requirements.txt
+          python herramientas/generador.py --all
+          aws s3 sync ./salida s3://mechbot-templates-$ENVIRONMENT
