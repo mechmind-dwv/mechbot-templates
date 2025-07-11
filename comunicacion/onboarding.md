@@ -10,4 +10,3 @@
 2. Genera plantillas:
 
 python herramientas/generador.py -t comunicacion/onboarding
-···
