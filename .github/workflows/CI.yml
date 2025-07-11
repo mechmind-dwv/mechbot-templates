@@ -6,12 +6,10 @@ on:
   pull_request:
     branches: ['*']
 
-permissions:
-  contents: read
-
 env:
   PYTHON_VERSION: '3.10'
   DJANGO_SETTINGS_MODULE: 'backend.settings'
+
 jobs:
   validate-and-test:
     runs-on: ubuntu-latest
@@ -67,10 +65,10 @@ jobs:
     needs: quality-assurance
     steps:
       - uses: actions/checkout@v4
-
+      
       - name: Docker build
         run: docker build -t mechbot-backend .
-
+        
       - name: Notify Slack
         uses: slackapi/slack-github-action@v1
         with:
