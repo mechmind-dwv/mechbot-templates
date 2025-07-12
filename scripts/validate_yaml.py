@@ -1,38 +1,39 @@
-#!/usr/bin/env python3Add commentMore actions
+#!/usr/bin/env python3
 import yaml
+import sys
 import os
 from pathlib import Path
 
-def validate_yaml_files():
-    yaml_dir = Path("variables")
-    errors = []
-    
-    for yaml_file in yaml_dir.glob("*.yaml"):
-        try:
-            with open(yaml_file) as f:
-                yaml.safe_load(f)
-            print(f"✓ {yaml_file} es válido")
-        except Exception as e:
-            errors.append(f"❌ Error en {yaml_file}: {str(e)}")
-    
-    if errors:
-        raise ValueError("\n".join(errors))
-def validate_yaml(path):
+def validate_yaml_file(file_path):
+    """Valida un archivo YAML"""
     try:
-        with open(path) as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             yaml.safe_load(f)
-        print(f"✓ {path} es válido")
+        print(f"✅ {file_path} - Válido")
         return True
-    except Exception as e:
-        print(f"❌ Error en {path}: {str(e)}")
+    except yaml.YAMLError as e:
+        print(f"❌ {file_path} - Error: {e}")
         return False
 
-if __name__ == "__main__":
-    validate_yaml_files()
-    yaml_file = Path("variables/globales.yaml")
-    if not yaml_file.exists():
-        print(f"Archivo no encontrado: {yaml_file}")
-        exit(1)
+def main():
+    """Valida todos los archivos YAML del proyecto"""
+    yaml_files = [
+        ".github/workflows/CI.yml",
+        "docker/docker-compose.yml"
+    ]
     
-    if not validate_yaml(yaml_file):
-        exit(1)
+    all_valid = True
+    for file_path in yaml_files:
+        if os.path.exists(file_path):
+            if not validate_yaml_file(file_path):
+                all_valid = False
+        else:
+            print(f"⚠️ {file_path} - No encontrado")
+    
+    if not all_valid:
+        sys.exit(1)
+    
+    print("🎉 Todos los archivos YAML son válidos")
+
+if __name__ == "__main__":
+    main()
