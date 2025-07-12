@@ -72,4 +72,4 @@ psycopg2-binary==2.9.9
 celery==5.3.4
 redis==5.0.1
 pytest-django==4.7.0
-coverage==7.3.2
+coverage==7.9.2
