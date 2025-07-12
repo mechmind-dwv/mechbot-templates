@@ -1,7 +1,0 @@
-import plotly.express as px
-from datetime import datetime
-import ipywidgets as widgets
-
-# Cargar datos de segmentación
-segmentacion = pd.read_csv('../data/segmentacion.csv')
-    marketing/dashboards/kpi_report.ipynb
