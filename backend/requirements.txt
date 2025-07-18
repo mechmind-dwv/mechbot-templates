@@ -68,7 +68,7 @@ filelock==3.18.0
 djangorestframework==3.16.0
 django-cors-headers==4.3.1
 python-decouple==3.8
-psycopg2-binary==2.9.9
+psycopg2-binary==2.9.10
 celery==5.3.4
 redis==5.0.1
 pytest-django==4.7.0
