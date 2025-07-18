@@ -1,0 +1,33 @@
+version: 2
+updates:
+  # Configuración para dependencias de Python (pip)
+  - package-ecosystem: "pip"
+    directory: "/"  # Escanea requirements.txt en la raíz
+    schedule:
+      interval: "weekly"  # Actualizaciones semanales
+    open-pull-requests-limit: 5  # Máximo 5 PRs simultáneos
+    reviewers:
+      - "mechmind-dwv"  # Revisor asignado
+    commit-message:
+      prefix: "chore"  # Prefijo para commits
+      prefix-development: "chore-dev"
+    ignore:  # Dependencias que no deben actualizarse
+      - dependency-name: "torch"
+        versions: ["< 2.3.1"]  # Ignora versiones antiguas de PyTorch
+      - dependency-name: "python-jose"
+        versions: ["< 3.3.2"]
+      - dependency-name: "cryptography"
+        versions: ["< 42.0.5"]
+
+  # Configuración para GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"  # Directorio de workflows
+    schedule:
+      interval: "monthly"  # Actualizaciones mensuales
+
+  # Configuración para dependencias de JavaScript (npm)
+  - package-ecosystem: "npm"
+    directory: "/"  # Escanea package.json en la raíz
+    schedule:
+      interval: "weekly"
+    versioning-strategy: "increase"  # Estrategia de control de versiones
