@@ -1,32 +1,75 @@
-# Entornos virtuales
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📁 ARCHIVOS DEL SISTEMA
+# ━━━━━━━━━━━━━━━━━━━━━━
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.log
+*.tmp
+*.bak
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🐍 ENTORNOS PYTHON
+# ━━━━━━━━━━━━━━━━━━━━━━
+__pycache__/
+*.py[cod]
+*.egg-info/
 .venv/
 venv/
+env/
+.python-version
 
-# Archivos de entorno
-.env
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📊 DATOS SENSIBLES
+# ━━━━━━━━━━━━━━━━━━━━━━
+*.env
+*.secret
+*.key
+credentials.json
+config_private.yaml
 
-# Archivos de sistema
-.DS_Store
-*.swp
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📈 REPORTES/ANALÍTICAS
+# ━━━━━━━━━━━━━━━━━━━━━━
+/dashboards/output/
+!/dashboards/output/.keep
+/data/raw/
+/data/processed/temporal_*
 
-# Archivos generados
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🖼️ ASSETS GENERADOS
+# ━━━━━━━━━━━━━━━━━━━━━━
+/templates/output/
+!/templates/output/.keep
+*.png.tmp
+*.jpg.tmp
 
-# Datos y binarios
-*.csv
-*.png
-*.ipynb
-
-# Node.js
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📦 DEPENDENCIAS
+# ━━━━━━━━━━━━━━━━━━━━━━
 node_modules/
-package-lock.json
+bower_components/
+.jupyter/
 
-# Documentos
-*.pptx
-*.pdf
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🛠 HERRAMIENTAS DE DESARROLLO
+# ━━━━━━━━━━━━━━━━━━━━━━
+.idea/
+.vscode/
+*.code-workspace
+*.iml
 
-# Archivos temporales
-*.log
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 📄 DOCUMENTACIÓN
+# ━━━━━━━━━━━━━━━━━━━━━━
+/docs/_build/
+/docs/.cache
+*.aux
+*.toc
+
+# ━━━━━━━━━━━━━━━━━━━━━━
+# 🚀 EXCEPCIONES (archivos a incluir)
+# ━━━━━━━━━━━━━━━━━━━━━━
+.keep
+.gitkeep
