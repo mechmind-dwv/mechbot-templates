@@ -1,11 +1,10 @@
 nane: quality-assurance
 runs-on: ubuntu-latest
 needs: validate-and-test
+- uses: actions/checkout@v4
 
  steps:
- - uses: actions/checkout@v4
- 
- - name: Code formatting check (Black)
+- name: Code formatting check (Black)
      run: black --check backend/
 
  - name: Run static type checking
