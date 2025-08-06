@@ -3,7 +3,7 @@
 [![MechBot Supercharged CI](https://github.com/MechBot-2x/mechbot-templates/actions/workflows/CI.yml/badge.svg)](https://github.com/MechBot-2x/mechbot-templates/actions/workflows/CI.yml)
 ![GitHub](https://img.shields.io/badge/Estado-Producción-brightgreen)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mechmind-dwv/mechbot-templates)
-[![GitHub](https://img.shields.io/badge/Ver_en_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/mechbot/marketing)
+[![GitHub](https://img.shields.io/badge/Ver_en_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/mechbot-templates/marketing)
  
 Repositorio centralizado de plantillas para el proyecto MechBot 2.0x. Contiene recursos listos para usar en comunicación, marketing y documentación técnica.
 
@@ -76,7 +76,7 @@ Este proyecto está bajo licencia [MIT](LICENSE).
 ## 📬 Contacto
 
 Equipo de Ingeniería MechBot  
-📧 ai mechmind@gmail.com  
+📧 ia.mechmind@gmail.com  
 🔗 [Sitio Oficial](https://mechbot.com)
 
 [![Logo MechBot](https://via.placeholder.com/100x30?text=MechBot+Logo)](https://mechbot.com)
