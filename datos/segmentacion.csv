@@ -1,6 +1,0 @@
-segmento,subsegmento,caracteristicas,tamaño_mercado,canal_primario,canal_secundario,frecuencia_compra,necesidad_clave
-talleres_mecanicos,independientes,"1-5 empleados, presupuesto limitado",45%,Facebook,WhatsApp Business,mensual,"optimizar costos"
-talleres_mecanicos,cadenas,"+10 sucursales, ERP integrado",25%,LinkedIn,Email Marketing,semanal,"estandarizar procesos"
-conductores,jovenes_tecno,"18-35 años, usan apps móviles",30%,Instagram,TikTok,bimestral,"rapidez"
-conductores,duenos_antiguos,"36-60 años, autos >10 años",40%,Facebook,YouTube,trimestral,"confiabilidad"
-conductores,flotillas,"empresas con >5 vehículos",15%,LinkedIn,Email Marketing,mensual,"gestión centralizada"
