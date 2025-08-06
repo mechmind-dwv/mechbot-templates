@@ -1,9 +1,11 @@
 name: CI Pipeline
 
-on: [push, pull_request]
-
-jobs:
-  test:
+      on: [push, pull_request]
+     jobs:
+permissions:
+contents: read
+pull-requests: write
+        test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -17,7 +19,7 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r backend/requirements.txt
-        pip install -r tools/requirements.txt
+        pip install -r herramientas/requirements.txt
         pip install pytest pytest-django pytest-cov safety bandit
 
     - name: Security checks
