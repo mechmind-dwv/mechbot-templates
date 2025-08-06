@@ -1,7 +1,7 @@
 name: MechBot Supercharged CI
 
 permissions:
-  contents: read
+  contents: witer
 
 on:
   push:
