@@ -1,7 +1,7 @@
 # docker-compose-prod.yml
 services:
   web:
-    image: mechmind-dwv/mechbot-templates:latest
+    image: MechBot-2x/mechbot-templates:latest
     ports:
       - "8000:8000"
     environment:
