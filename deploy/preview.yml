@@ -1,0 +1,17 @@
+deploy-preview:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: quality-assurance
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Docker build
+        run: docker build -t mechbot-backend .
+        
+      - name: Notify Slack
+        uses: slackapi/slack-github-action@v1
+        with:
+          channel-id: 'deployments'
+          status: ${{ job.status }}
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
