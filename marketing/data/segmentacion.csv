@@ -1,14 +1,13 @@
-**5.1. Objetivos de Marketing (SMART)**
-| **Objetivo**                     | **Métrica**                          | **Plazo**   |
-|----------------------------------|--------------------------------------|-------------|
-| **Reconocimiento de marca**      | 50% de talleres objetivo lo conocen  | 6 meses     |
-| **Tasa de adopción**             | 20% en talleres mecánicos            | 12 meses    |
-| **Satisfacción del cliente**     | CSAT ≥ 80% (encuestas trimestrales)  | Continuo    |
-| **Tráfico web**                  | +50% (SEO + contenido)               | 6 meses     |
-| **Generación de leads**          | 300 leads calificados                | 12 meses    |
-| **Conversión a registros**       | +15% tasa de conversión              | 12 meses    |
-| **Feedback continuo**            | 40% de usuarios activos encuestados  | Trimestral  |
+### **5.2. Segmentación del Mercado**
+#### **Talleres Mecánicos**
+- **Independientes:** Pequeños negocios que buscan optimizar gestión.
+- **Cadenas:** Necesitan estandarización y eficiencia.
 
-🔹 **Recomendación GitHub:**
-- Usar *issues* para trackear KPIs y asignar responsables.
-- Incluir un *project board* para seguimiento de objetivos.
+#### **Usuarios Finales (Conductores)**
+- **Jóvenes:** Prefieren soluciones digitales.
+- **Dueños de autos antiguos:** Requieren mantenimiento frecuente.
+
+🔹 **Mejora:**
+- Añadir datos demográficos/psicográficos en un *archivo CSV* en el repositorio.
+
+---
