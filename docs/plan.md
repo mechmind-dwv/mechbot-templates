@@ -1,10 +1,3 @@
-# **Plan de Marketing para MechBot 2.0x**
-*(Optimizado para implementación en GitHub)*
-
-Este documento presenta un **plan de marketing estructurado** para el lanzamiento y crecimiento de **MechBot 2.0x**, un chatbot para talleres mecánicos. El plan sigue un enfoque estratégico basado en objetivos SMART, segmentación clara y métricas de desempeño.
-
----
-
 ## **5. Plan de Marketing para MechBot 2.0x**
 
 ### **5.1. Objetivos de Marketing (SMART)**
