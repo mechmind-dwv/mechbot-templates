@@ -30,3 +30,7 @@ package-lock.json
 
 # Archivos temporales
 *.log
+# .gitignore contents
+.env
+__pycache__/
+*.tmp

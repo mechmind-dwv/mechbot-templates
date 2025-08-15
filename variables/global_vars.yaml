@@ -1,0 +1,15 @@
+# variables/global_vars.yaml
+brand:
+  name: "MechBot 2.0x"
+  slogan: "Revolucionando la atención automotriz"
+  colors:
+    primary: "#2E86AB"
+    secondary: "#F18F01"
+
+contacts:
+  support_email: "soporte@mechbot.com"
+  sales_phone: "+52 55 4141 6363"
+
+urls:
+  website: "https://mechbot.com"
+  demo: "https://demo.mechbot.com"
