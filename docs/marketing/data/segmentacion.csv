@@ -1,15 +1,22 @@
-**Segmentación de Mercado**
-   - Visualización interactiva por segmento
-   - Menú desplegable de widgets para selección.
+### **5.2. Segmentación del Mercado**  
+#### **Talleres Mecánicos**  
+- **Independientes:** Pequeños negocios que buscan optimizar gestión.  
+- **Cadenas:** Necesitan estandarización y eficiencia.  
 
-**Rendimiento de Canales**
-   - Diagrama de dispersión de CTR vs Costo por cliente potencial
-   - Tamaño de burbujas por inversión
+#### **Usuarios Finales (Conductores)**  
+- **Jóvenes:** Prefieren soluciones digitales.  
+- **Dueños de autos antiguos:** Requieren mantenimiento frecuente.  
 
-**Seguimiento de objetivos**
-   - Gráfico de embudo de progreso
-   - Comparación meta vs. real
+🔹 **Mejora:**  
+- Añadir datos demográficos/psicográficos en un *archivo CSV* en el repositorio.  
 
-**Recomendaciones**
-   - Generación automática basada en datos
-   - Priorización por tamaño de mercado
+---
+
+### **5.3. Propuesta de Valor**  
+**"MechBot 2.0x optimiza la gestión de talleres y mejora la experiencia del cliente con:**  
+✔ Agendamiento automático de citas.  
+✔ Respuestas instantáneas a consultas comunes.  
+✔ Reducción de tiempos muertos."  
+
+🔹 **Sugerencia:**  
+- Crear un *README.md* con casos de uso reales (ejemplos en formato Markdown).  
