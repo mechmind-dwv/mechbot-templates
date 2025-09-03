@@ -1,3 +1,4 @@
+# .github/workflows/validate-templates.yml
 name: Validación
 on: [pull_request]
 
@@ -9,12 +10,12 @@ jobs:
         python-version: ["3.9", "3.10"]
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-
+          
       - name: Validación Estructural
         run: |
           pip install yamllint jinja2-cli

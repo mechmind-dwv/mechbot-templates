@@ -1,0 +1,19 @@
+# .github/workflows/generate-templates.yml
+name: Generar Plantillas
+on: [push]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r herramientas/requirements.txt
+      - run: python herramientas/generador.py -t all
+      - uses: actions/upload-artifact@v3
+        with:
+          name: generated-templates
+          path: salida/

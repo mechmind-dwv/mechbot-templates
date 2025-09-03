@@ -1,0 +1,6 @@
+graph LR
+    A[Commit] --> B{¿Cambios breaking?}
+    B -->|Sí| C[Incrementa MAYOR]
+    B -->|No| D{¿Nuevas features?}
+    D -->|Sí| E[Incrementa MENOR]
+    D -->|No| F[Incrementa PATCH]

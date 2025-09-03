@@ -1,3 +1,4 @@
+// .versionrc
 {
   "types": [
     {"type": "feat", "section": "Features"},
