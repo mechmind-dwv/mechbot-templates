@@ -1,0 +1,29 @@
+# templates/deployment/docker-compose.prod.yml
+version: '3.8'
+
+services:
+  mechbot:
+    image: ${REGISTRY}/mechbot:${TAG:-latest}
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2GB
+    env_file: .env.prod
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  postgres:
+    image: postgres:15-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+
+volumes:
+  pgdata:
