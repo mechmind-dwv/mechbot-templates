@@ -1,0 +1,15 @@
+- name: Validate YAML variables
+  run: |
+    if [ -d "variables_globales.yaml" ]; then
+      echo "❌ Error: Existe un directorio llamado 'variables_globales.yaml' (debería ser archivo)"
+      ls -l
+      exit 1
+    elif [ -f "variables/globales.yaml" ]; then
+      python -c "import yaml; yaml.safe_load(open('variables/globales.yaml'))"
+      echo "✓ YAML validado correctamente"
+    else
+      echo "❌ Archivo no encontrado: variables/globales.yaml"
+      echo "Estructura actual:"
+      find . -type f -name '*.yaml' -o -name '*.yml'
+      exit 1
+    fi
