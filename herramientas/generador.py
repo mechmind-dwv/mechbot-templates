@@ -6,11 +6,23 @@ Usage:
   python herramientas/generador.py -t all               # all known template dirs
 """
 import argparse
+import logging
 import os
 import sys
 from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler("generator.log", mode='a', encoding='utf-8')
+    ]
+)
+logger = logging.getLogger("MechBotGenerator")
 
 TEMPLATE_DIRS = ["comunicacion", "marketing", "tecnica", "reportes"]
 
@@ -26,11 +38,14 @@ def load_variables() -> dict:
             with open(vf, "r") as f:
                 data = yaml.safe_load(f)
                 if data:
+                    logger.info(f"Loaded variables from {vf}")
                     return data
+    logger.warning("No variable file found; templates will be rendered with empty context.")
     return {}
 
 def render_templates(template_dir: str, variables: dict):
     """Render all Jinja2 templates in a directory."""
+    logger.info(f"Processing directory: {template_dir}")
     env = Environment(loader=FileSystemLoader(template_dir))
     output_base = Path("salida") / Path(template_dir).name
     output_base.mkdir(parents=True, exist_ok=True)
@@ -40,17 +55,18 @@ def render_templates(template_dir: str, variables: dict):
             if file.endswith((".j2", ".jinja", ".jinja2", ".template")):
                 filepath = Path(root) / file
                 rel_path = filepath.relative_to(template_dir)
-                out_name = filepath.stem  # removes the template extension
+                out_name = filepath.stem  # removes template extension
                 out_path = output_base / rel_path.parent / out_name
                 out_path.parent.mkdir(parents=True, exist_ok=True)
                 try:
                     template = env.get_template(str(rel_path.as_posix()))
                     rendered = template.render(**variables)
                     out_path.write_text(rendered)
-                    print(f"✓ Generated {out_path}")
+                    logger.info(f"Generated: {out_path}")
                 except Exception as e:
-                    print(f"✗ Error in {filepath}: {e}", file=sys.stderr)
-    print(f"Finished {template_dir}.")
+                    logger.error(f"Error rendering {filepath}: {e}")
+
+    logger.info(f"Finished processing {template_dir}.")
 
 def main():
     parser = argparse.ArgumentParser(description="MechBot Template Generator")
@@ -61,20 +77,16 @@ def main():
     if target == "all":
         dirs = [d for d in TEMPLATE_DIRS if Path(d).is_dir()]
         if not dirs:
-            print("Error: no template directories found.", file=sys.stderr)
+            logger.error("No template directories found.")
             sys.exit(1)
     else:
         if not Path(target).is_dir():
-            print(f"Error: directory '{target}' not found.", file=sys.stderr)
+            logger.error(f"Directory '{target}' not found.")
             sys.exit(1)
         dirs = [target]
 
     variables = load_variables()
-    if not variables:
-        print("Warning: no variables loaded. Templates may be rendered empty.", file=sys.stderr)
-
     for d in dirs:
-        print(f"Processing {d}...")
         render_templates(d, variables)
 
 if __name__ == "__main__":
