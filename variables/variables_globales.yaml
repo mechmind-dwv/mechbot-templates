@@ -1,7 +1,8 @@
 - name: Validate YAML variables
   run: |
     if [ -d "variables_globales.yaml" ]; then
-      echo "❌ Error: Existe un directorio llamado 'variables_globales.yaml' (debería ser archivo)"
+      echo "❌ Error: Existe un directorio llamado 'variables_globales.yaml' (deb
+      ería ser archivo)"
       ls -l
       exit 1
     elif [ -f "variables/globales.yaml" ]; then

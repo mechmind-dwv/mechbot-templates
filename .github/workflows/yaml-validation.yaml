@@ -21,4 +21,4 @@ jobs:
           echo "::group::Validating YAML files"
           find . \( -name "*.yaml" -o -name "*.yml" \) -print0 | xargs -0 -I {} sh -c 'echo "Validating {}"; python -m yamllint {}'
           echo "::endgroup::"
-          echo "::notice::All YAML files validated successfully"
+          echo "::notice::All YAML files validated"
