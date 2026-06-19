@@ -1,11 +1,12 @@
-name: Notificaciones
+name: Notify on Generation
+
 on:
   workflow_run:
-    workflows: ["Generación Programada"]
+    workflows: ["Scheduled Generation"]
     types: [completed]
 
 jobs:
-  slack-notify:
+  trigger-slack:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
