@@ -1,15 +1,16 @@
-name: Notificaciones
+name: Slack Notification
+
 on:
   workflow_run:
-    workflows: ["Generación Programada"]
+    workflows: ["Scheduled Generation"]
     types: [completed]
 
 jobs:
   slack-notify:
     runs-on: ubuntu-latest
     permissions:
-      contents: read  # Required for accessing repository contents
-      workflow: write  # Required for triggering workflows
+      contents: read
+      actions: write
     steps:
       - uses: actions/github-script@v6
         with:
