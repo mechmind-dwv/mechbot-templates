@@ -1,4 +1,16 @@
 [tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
 testpaths = ["tests"]
 python_files = "test_*.py"
 python_functions = "test_*"
+
+[tool.coverage.run]
+source = ["backend"]
+omit = [
+    "*/tests/*",
+    "*/migrations/*",
+    "*__init__.py",
+]
+
+[tool.coverage.report]
+show_missing = true
