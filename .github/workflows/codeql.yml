@@ -2,9 +2,9 @@ name: "CodeQL Advanced"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
   schedule:
     - cron: '42 0 * * 1'  # Ejecuta el workflow cada lunes a las 00:42 UTC
 
@@ -32,9 +32,8 @@ jobs:
 
       - name: Configurar Python
         uses: actions/setup-python@v5
-
         with:
-         python-version: '3.11'
+          python-version: '3.11'
 
       - name: Inicializar CodeQL
         uses: github/codeql-action/init@v3
