@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """
 MechBot Template Generator.
-Usage:
-  python herramientas/generador.py -t <template_dir>   # single directory
-  python herramientas/generador.py -t all               # all known template dirs
 """
 import argparse
 import logging
@@ -13,7 +10,6 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -27,10 +23,6 @@ logger = logging.getLogger("MechBotGenerator")
 TEMPLATE_DIRS = ["comunicacion", "marketing", "tecnica", "reportes"]
 
 def load_variables() -> dict:
-    """
-    Load variables from the first valid YAML mapping found.
-    Returns a dict (possibly empty) with the variables.
-    """
     var_files = [
         "variables/variables_globales.yaml",
         "variables/globales.yaml",
@@ -38,21 +30,15 @@ def load_variables() -> dict:
     ]
     for vf in var_files:
         if Path(vf).exists():
-            try:
-                with open(vf, "r") as f:
-                    data = yaml.safe_load(f)
-                    if isinstance(data, dict):
-                        logger.info(f"Loaded variables from {vf}")
-                        return data
-                    else:
-                        logger.warning(f"File {vf} does not contain a mapping (dict), skipping.")
-            except Exception as e:
-                logger.error(f"Error reading {vf}: {e}")
+            with open(vf, "r") as f:
+                data = yaml.safe_load(f)
+                if isinstance(data, dict):
+                    logger.info(f"Loaded variables from {vf}")
+                    return data
     logger.warning("No valid variable file found; templates will be rendered with empty context.")
     return {}
 
 def render_templates(template_dir: str, variables: dict):
-    """Render all Jinja2 templates in a directory."""
     logger.info(f"Processing directory: {template_dir}")
     env = Environment(loader=FileSystemLoader(template_dir))
     output_base = Path("salida") / Path(template_dir).name
@@ -63,7 +49,12 @@ def render_templates(template_dir: str, variables: dict):
             if file.endswith((".j2", ".jinja", ".jinja2", ".template")):
                 filepath = Path(root) / file
                 rel_path = filepath.relative_to(template_dir)
+                # Determine output extension
                 out_name = filepath.stem  # removes template extension
+                # If the template content looks like HTML, add .html
+                content = filepath.read_text()
+                if '<html' in content or '<!doctype html>' in content.lower():
+                    out_name += '.html'
                 out_path = output_base / rel_path.parent / out_name
                 out_path.parent.mkdir(parents=True, exist_ok=True)
                 try:
