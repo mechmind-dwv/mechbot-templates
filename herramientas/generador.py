@@ -27,7 +27,10 @@ logger = logging.getLogger("MechBotGenerator")
 TEMPLATE_DIRS = ["comunicacion", "marketing", "tecnica", "reportes"]
 
 def load_variables() -> dict:
-    """Load variables from the global YAML configuration."""
+    """
+    Load variables from the first valid YAML mapping found.
+    Returns a dict (possibly empty) with the variables.
+    """
     var_files = [
         "variables/variables_globales.yaml",
         "variables/globales.yaml",
@@ -35,12 +38,17 @@ def load_variables() -> dict:
     ]
     for vf in var_files:
         if Path(vf).exists():
-            with open(vf, "r") as f:
-                data = yaml.safe_load(f)
-                if data:
-                    logger.info(f"Loaded variables from {vf}")
-                    return data
-    logger.warning("No variable file found; templates will be rendered with empty context.")
+            try:
+                with open(vf, "r") as f:
+                    data = yaml.safe_load(f)
+                    if isinstance(data, dict):
+                        logger.info(f"Loaded variables from {vf}")
+                        return data
+                    else:
+                        logger.warning(f"File {vf} does not contain a mapping (dict), skipping.")
+            except Exception as e:
+                logger.error(f"Error reading {vf}: {e}")
+    logger.warning("No valid variable file found; templates will be rendered with empty context.")
     return {}
 
 def render_templates(template_dir: str, variables: dict):
