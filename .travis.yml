@@ -11,7 +11,8 @@ env:
     - DOCKER_PASSWORD=$DOCKER_PASSWORD
 
 before_install:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdi
+          n
 
 script:
   - make image
