@@ -1,23 +1,3 @@
-El README que propones tiene algunos desajustes importantes con la realidad actual del proyecto. Si lo publicamos así, puede confundir a cualquiera que quiera usar el repositorio. Te detallo los fallos y te propongo una versión corregida, precisa y más potente, basada en lo que realmente tenemos funcionando.
-
-❌ Problemas detectados en la versión propuesta
-
-1. Estructura de carpetas incorrecta
-      Dice incluir reportes/ y templates/ como parte del contenido principal. Pero el árbol real tiene comunicacion/, marketing/, tecnica/ y datos/. La carpeta templates/ existe pero está vacía o contiene restos heredados; no es el núcleo.
-2. Parámetros del generador inexistentes
-      El ejemplo muestra -d '{"nombre":"..."}' -o salida/. Nuestro generador (herramientas/generador.py) solo admite el flag -t y carga las variables desde los YAML automáticamente. Ese comando fallaría.
-3. Workflow CI/CD obsoleto
-      Usa actions/checkout@v3 y upload-artifact@v3. Ya actualizamos todo a v4. Además, el nombre del workflow está en español, cuando los reales están en inglés.
-4. Referencia a archivo de variables incorrecto
-      En troubleshooting menciona variables/globales.yaml. Nuestro archivo más completo y el que usa el generador por defecto es variables/global_vars.yaml.
-5. Email de contacto desactualizado
-      Aparece ingenieria@mechbot.com, pero el proyecto usa ia.mechmind@gmail.com (como consta en los commits y en la clave SSH).
-
-✅ README corregido y ampliado (listo para copiar)
-
-Esta versión refleja exactamente lo que tenemos, incluye los workflows avanzados que ya funcionan, y está en español (con términos técnicos en inglés donde es inevitable). Si prefieres inglés, la traduzco en un momento.
-
-```markdown
 # 🛠️ Repositorio de Plantillas MechBot 2.0x
 
 ![Estado](https://img.shields.io/badge/Estado-Producción-brightgreen)
