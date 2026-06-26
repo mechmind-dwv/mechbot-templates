@@ -9,12 +9,5 @@ jobs:
   trigger-slack:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'slack-notification.yml',
-              ref: 'main'
-            })
+      - name: Notification placeholder
+        run: echo "Scheduled Generation completed. Notifications would be sent here."

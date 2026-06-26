@@ -1,6 +1,7 @@
 name: Slack Notification
 
 on:
+  workflow_dispatch:  # Permite ser llamado manualmente o desde otro workflow
   workflow_run:
     workflows: ["Scheduled Generation"]
     types: [completed]
@@ -15,9 +16,4 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'slack-notification.yml',
-              ref: 'main'
-            })
+            console.log('Slack notification workflow triggered');
